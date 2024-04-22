@@ -38,6 +38,9 @@ export const POST = async (request: NextRequest) => {
     });
   } catch (error) {
     // Explicitly define the type of error
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    return NextResponse.json(
+      { error: (error as Error).message },
+      { status: 500 },
+    );
   }
 };
