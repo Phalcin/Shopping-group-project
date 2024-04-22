@@ -2,9 +2,6 @@ import NextAuth from "next-auth/next";
 import GithubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
 import Auth0Provider from "next-auth/providers/auth0";
-import LinkedInProvider from "next-auth/providers/linkedin";
-import InstagramProvider from "next-auth/providers/instagram";
-import DiscordProvider from "next-auth/providers/discord";
 
 const authOptions = {
   providers: [
@@ -15,11 +12,6 @@ const authOptions = {
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID!,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
-    }),
-    Auth0Provider({
-      clientId: process.env.AUTH0_CLIENT_ID!,
-      clientSecret: process.env.AUTH0_CLIENT_SECRET!,
-      issuer: process.env.AUTH0_ISSUER,
     }),
   ],
 };
