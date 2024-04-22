@@ -85,12 +85,12 @@ const Navbar = () => {
           {showMenu ? (
             <X
               className="w-7 h-7 cursor-pointer ml-4"
-              onClick={handleMenuClick}
+              onClick={handleMenuClick as any}
             />
           ) : (
             <Menu
               className="w-7 h-7 cursor-pointer ml-4"
-              onClick={handleMenuClick}
+              onClick={handleMenuClick as any}
             />
           )}
         </div>
